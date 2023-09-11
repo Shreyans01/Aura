@@ -1,0 +1,124 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "aura-front": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/aura-front",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "./src/assets/js/jquery.min.js",
+              "./src/assets/js/modernizr.js",
+              "./src/assets/js/moment.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "./src/assets/vendor/overlay-scroll/jquery.overlayScrollbars.min.js",
+              "./src/assets/vendor/overlay-scroll/custom-scrollbar.js",
+              "./src/assets/vendor/newsticker/newsTicker.min.js",
+              "./src/assets/vendor/newsticker/custom-newsTicker.js",
+              "./src/assets/vendor/apex/apexcharts.min.js",
+              "./src/assets/vendor/apex/custom/dash1/analytics.js",
+              "./src/assets/vendor/apex/custom/dash1/visitors.js",
+              "./src/assets/vendor/apex/custom/dash1/income.js",
+              "./src/assets/vendor/apex/custom/dash1/orders.js",
+              "./src/assets/vendor/apex/custom/dash1/sales.js",
+              "./src/assets/vendor/apex/custom/dash1/sparkline.js",
+              "./src/assets/vendor/apex/custom/dash1/conversion.js",
+              "./src/assets/js/main.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "aura-front:build:production"
+            },
+            "development": {
+              "browserTarget": "aura-front:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "aura-front:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "8a98434a-6073-40b1-959a-669c6df55a2c"
+  }
+}
