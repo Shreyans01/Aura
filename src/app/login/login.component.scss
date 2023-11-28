@@ -1,0 +1,90 @@
+
+@import "../../styles.scss";
+.login-container {
+	background: $body-bg;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  overflow: auto;
+  height: 100vh;
+}
+.maintenance-page {
+	background: $body-bg;
+	display: flex;
+	align-items: center;
+	color: $white;
+}
+
+/************* Login *************/
+.login-box {
+	background: $white;
+	margin: auto;
+	width: 450px;
+	min-height: 320px;
+  overflow-y: auto;
+	.login-logo {
+		display: flex;
+		img {
+			width: 150px;
+		}
+	}
+	.btn {
+		img.login-icon {
+			width: 30px;
+			height: 30px;
+		}
+	}
+	.login-form-footer {
+		border-top: 1px solid $white;
+	}
+}
+@media (max-width: 576px) {
+	.login-box {
+		padding: 30px 20px 30px 20px;
+		width: auto;
+	}
+}
+
+/******** Maintenance Screen ********/
+.maintenance-screen {
+	background: $primary;
+	color: $white;
+	h1 {
+		font-size: 5rem;
+	}
+	.btn {
+		padding: 0.7rem 1.8rem;
+		@include roundedCorners(50);
+		color: $white;
+		background: transparent;
+		border: 2px solid $white;
+		&:hover {
+			color: $primary;
+			background: $white;
+			border: 2px solid $white;
+		}
+	}
+}
+
+/************* Error Page *************/
+
+.error-screen {
+	background: $red;
+	color: $white;
+	h1 {
+		font-family: Rubik Mono One;
+		font-size: 15rem;
+	}
+	.btn {
+		padding: 0.7rem 1.8rem;
+		@include roundedCorners(50);
+		color: $white;
+		background: transparent;
+		border: 2px solid $white;
+		&:hover {
+			color: $red;
+			background: $white;
+			border: 2px solid $white;
+		}
+	}
+}
