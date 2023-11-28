@@ -1,1 +1,377 @@
-<p>create-customer works!</p>
+<!-- Content wrapper scroll start -->
+<div class="content-wrapper-scroll">
+
+    <!-- Main header starts -->
+    <div class="main-header d-flex align-items-center justify-content-between position-relative">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="page-icon pe-3">
+                <i class="bi bi-stickies"></i>
+            </div>
+            <div class="page-title d-none d-md-block">
+                <h5>Customer</h5>
+            </div>
+        </div>
+        <!-- Live updates start -->
+        <ul class="updates d-flex align-items-end flex-column overflow-hidden" id="updates">
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-envelope-paper text-red font-2x me-2"></i>
+                    <span>12 emails from David Michaiah.</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-bar-chart text-blue font-2x me-2"></i>
+                    <span>15new features updated successfully.</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-folder-check text-yellow font-2x me-2"></i>
+                    <span>The media folder is created successfully.</span>
+                </a>
+            </li>
+        </ul>
+        <!-- Live updates end -->
+    </div>
+    <!-- Main header ends -->
+
+    <!-- Content wrapper start -->
+    <div class="content-wrapper">
+        <!-- Row start -->
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Create Customer</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="create-invoice-wrapper">
+                            <!-- Row start -->
+                            <div class="row">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <!-- Row start -->
+                                    <div class="row">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="customerName" class="form-label">Customer Name</label>
+                                                <input type="text" id="customerName" class="form-control"
+                                                    placeholder="Enter Customer Name" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invEmail" class="form-label">Customer Email</label>
+                                                <input type="text" id="invEmail" class="form-control"
+                                                    placeholder="Enter Customer Email" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invPhoneNumber" class="form-label">Customer Phone Number</label>
+                                                <input type="number" id="invPhoneNumber" class="form-control"
+                                                    placeholder="Enter Customer Phone Number" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invBankName" class="form-label">Customer Bank Name</label>
+                                                <input type="text" id="invBankName" class="form-control"
+                                                    placeholder="Enter Customer Bank Name" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invBankPercentage" class="form-label">Customer Bank Percentage</label>
+                                                <input type="number" id="invBankPercentage" class="form-control"
+                                                    placeholder="Enter Customer BankPercentage" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invMarginPercentage" class="form-label">Customer Margin Percentage</label>
+                                                <input type="number" id="invMarginPercentage" class="form-control"
+                                                    placeholder="Enter Customer MarginPercentage" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invNumber" class="form-label">Customer Number</label>
+                                                <input type="text" id="invNumber" class="form-control"
+                                                    placeholder="Enter Customer Number" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="dueDate" class="form-label">Due Date</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control datepicker-opens-left"
+                                                        id="dueDate" placeholder="DD/MM/YYYY" />
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-calendar4"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-2">
+                                                <label for="msgCustomer" class="form-label">Message</label>
+                                                <textarea rows="3" id="msgCustomer" class="form-control"></textarea>
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                    </div>
+                                    <!-- Row end -->
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                        </div>
+
+                        <!-- Row start -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="7" class="pt-3 pb-3">
+                                                    Items/Products
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Quantity</th>
+                                                <th>Unit</th>
+                                                <th>Price</th>
+                                                <th>VAT</th>
+                                                <th>Amount (Net)</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <select class="form-select">
+                                                        <option>Select Product</option>
+                                                        <option>Mobiles</option>
+                                                        <option>Books</option>
+                                                        <option>Clothing</option>
+                                                        <option>Electronics</option>
+                                                        <option>Food</option>
+                                                        <option>Games</option>
+                                                        <option>Gifts</option>
+                                                        <option>Laptops</option>
+                                                        <option>Mobiles</option>
+                                                        <option>Music</option>
+                                                        <option>Office</option>
+                                                        <option>Pharmacy</option>
+                                                        <option>Sports</option>
+                                                        <option>Toys</option>
+                                                    </select>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="m-0">
+                                                        <input type="number" class="form-control" placeholder="Qty" />
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="m-0">
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="input-group m-0">
+                                                        <input type="text" class="form-control" />
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-currency-dollar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="input-group m-0">
+                                                        <input type="text" class="form-control" />
+                                                        <span class="input-group-text">%</span>
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="input-group m-0">
+                                                        <input type="text" class="form-control" />
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-currency-dollar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-flex gap-3">
+                                                        <button class="btn btn-outline-danger">
+                                                            <i class="bi bi-trash m-0"></i>
+                                                        </button>
+                                                        <button class="btn btn-outline-success">
+                                                            <i class="bi bi-pencil m-0"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <select class="form-select">
+                                                        <option>Select Product</option>
+                                                        <option>Mobiles</option>
+                                                        <option>Books</option>
+                                                        <option>Clothing</option>
+                                                        <option>Electronics</option>
+                                                        <option>Food</option>
+                                                        <option>Games</option>
+                                                        <option>Gifts</option>
+                                                        <option>Laptops</option>
+                                                        <option>Mobiles</option>
+                                                        <option>Music</option>
+                                                        <option>Office</option>
+                                                        <option>Pharmacy</option>
+                                                        <option>Sports</option>
+                                                        <option>Toys</option>
+                                                    </select>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="m-0">
+                                                        <input type="number" class="form-control" placeholder="Qty" />
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="m-0">
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="input-group m-0">
+                                                        <input type="text" class="form-control" />
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-currency-dollar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="input-group m-0">
+                                                        <input type="text" class="form-control" />
+                                                        <span class="input-group-text">%</span>
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <!-- Form group start -->
+                                                    <div class="input-group m-0">
+                                                        <input type="text" class="form-control" />
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-currency-dollar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-flex gap-3">
+                                                        <button class="btn btn-outline-danger">
+                                                            <i class="bi bi-trash m-0"></i>
+                                                        </button>
+                                                        <button class="btn btn-outline-success">
+                                                            <i class="bi bi-pencil m-0"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button class="btn btn-dark">
+                                                        Add New Row
+                                                    </button>
+                                                </td>
+                                                <td colspan="6">
+                                                    <div class="row justify-content-end">
+                                                        <div class="col-auto">
+                                                            <label class="col-form-label">Discount % of Total
+                                                                Amount</label>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <input type="text" class="form-control" placeholder="0%" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5">&nbsp;</td>
+                                                <td>
+                                                    <p class="m-0">Subtotal</p>
+                                                    <p class="m-0">Discount</p>
+                                                    <p class="m-0">VAT</p>
+                                                    <h5 class="mt-2 text-red">Total USD</h5>
+                                                </td>
+                                                <td>
+                                                    <p class="m-0">$0.00</p>
+                                                    <p class="m-0">$0.00</p>
+                                                    <p class="m-0">$0.00</p>
+                                                    <h5 class="mt-2 text-red">$0.00</h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="text-end">
+                                    <button class="btn btn-outline-success">
+                                        Save as Draft
+                                    </button>
+                                    <a [routerLink]="['/manage-customer']" class="btn btn-success ms-1">Create
+                                        Customer</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row end -->
+
+    </div>
+    <!-- Content wrapper end -->
+
+</div>
+<!-- Content wrapper scroll end -->

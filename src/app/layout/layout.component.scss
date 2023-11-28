@@ -1,4 +1,4 @@
-@import "../../../../styles.scss";
+@import "../../styles.scss";
 
 /************************************************
 	************************************************
@@ -280,7 +280,7 @@ p {
 	border-top: 1px solid $border-bg;
 }
 .v-curve-seperator {
-	background: url('/assets/img/curve-line.svg') repeat-y;
+	background: url('../../assets/img/curve-line.svg') repeat-y;
 	background-position: right center;
 }
 
@@ -581,7 +581,7 @@ p {
 					position: absolute;
 					right: 0;
 					top: 1px;
-					background: url('/assets/img/menu-arrow.svg');
+					background: url('../../assets/img/menu-arrow.svg');
 					background-size: 100%;
 					background-repeat: no-repeat;
 					width: 24px;
@@ -603,7 +603,7 @@ p {
 							position: absolute;
 							right: 0;
 							top: 1px;
-							background: url('/assets/img/menu-arrow.svg');
+							background: url('../../assets/img/menu-arrow.svg');
 							background-size: 100%;
 							background-repeat: no-repeat;
 							width: 20px;
@@ -839,7 +839,7 @@ ul.updates {
 
 /************* 6.6 Page Title *************/
 .page-icon {
-	background: url('/assets/img/curve-line.svg') repeat-y;
+	background: url('../../assets/img/curve-line.svg') repeat-y;
 	background-position: right center;
 	i {
 		font-size: 2rem;
@@ -1125,7 +1125,7 @@ ul.updates {
 		position: absolute;
 		left: 7px;
 		top: 10px;
-		background: url(/assets/img//curve-line.svg) repeat-y;
+		background: url(../../assets/img//curve-line.svg) repeat-y;
 		height: 100%;
 		width: 7px;
 	}
@@ -1646,7 +1646,7 @@ button {
 .activity-block {
 	&:before {
 		content: "";
-		background: url('/assets/img/curve-line.svg') repeat-y;
+		background: url('../../assets/img/curve-line.svg') repeat-y;
 		position: absolute;
 		left: 40px;
 		top: 0;
@@ -1679,7 +1679,7 @@ button {
 .sales-reports-container {
 	padding: 20px 0 40px 0;
 	.middle-block {
-		background: url('/assets/img/infographic.svg') no-repeat center center;
+		background: url('../../assets/img/infographic.svg') no-repeat center center;
 		min-height: 280px;
 		width: 100%;
 		max-width: 640px;

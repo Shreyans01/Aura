@@ -236,4 +236,303 @@ body {
 	background: $white;
 }
 
+/******** 8.40 Create Invoice Wrapper ********/
+.create-invoice-wrapper {
+	background: $blue-700;
+	padding: 15px;
+	margin: 0 0 15px 0;
+	@include roundedCorners(8);
+}
+/************************************************
+	************************************************
+					9. Plugins
+	************************************************
+************************************************/
+/******** 9.1 Overlay Scroll ********/
+.sidebarMenuScroll {
+	height: 100%;
+  }
+  .sidebarMenuScroll .os-scrollbar-vertical {
+	left: 0;
+	right: initial;
+  }
+  
+  .scroll370 {
+	height: 370px;
+  }
+  
+  .scroll360 {
+	height: 360px;
+  }
+  
+  .scroll333 {
+	height: 333px;
+  }
+  
+  .scroll160 {
+	height: 160px;
+  }
+  
+  /******** 9.2 Credit Card Type ********/
+  #creditCardType {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+  }
+  #creditCardType .credit-card {
+	margin: 5px 5px 0 0;
+	display: inline-block;
+  }
+  #creditCardType .credit-card img {
+	max-width: 40px;
+	filter: grayscale(100%);
+  }
+  #creditCardType .credit-card.highlight img {
+	filter: grayscale(10%);
+  }
+  
+  /******** 9.2 jVector Maps ********/
+  .jvectormap-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none;
+  }
+  
+  .jvectormap-tip {
+	position: absolute;
+	display: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	background: #191919;
+	color: #ffffff;
+	font-size: 0.75rem;
+	padding: 6px 12px;
+  }
+  
+  @-webkit-keyframes showHideDot {
+	0% {
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 1;
+	}
+	60% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0;
+	}
+  }
+  @keyframes showHideDot {
+	0% {
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 1;
+	}
+	60% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0;
+	}
+  }
+  /******** 9.3 Apex Graphs ********/
+  .apex-hide-lines .apexcharts-xaxis {
+	display: none;
+  }
+  .apex-hide-lines .apexcharts-grid {
+	display: none;
+  }
+  
+  .apex-dark-legend .apexcharts-legend-text {
+	color: #17181c !important;
+  }
+  .apex-dark-legend .apexcharts-xaxis-label {
+	fill: #17181c !important;
+  }
+  
+  /******** 9.4 Rating ********/
+  .rating-stars {
+	width: 120px !important;
+	line-height: 100%;
+  }
+  .rating-stars img {
+	width: 18px;
+	height: 18px;
+  }
+  
+  /******** 9.2 DropZone ********/
+  .dropzone {
+	border: 2px dashed #b7c6d8 !important;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background: #ffffff;
+	min-height: 250px !important;
+	display: flex;
+	align-items: center;
+  }
+  .dropzone .dz-message {
+	font-weight: 700;
+	margin: 0 auto !important;
+  }
+  .dropzone .dz-message .note {
+	font-size: 0.9rem;
+	display: block;
+	margin-top: 1rem;
+	color: #17181c !important;
+  }
+  .dropzone.sm {
+	min-height: 180px !important;
+  }
+  
 
+/************************************************
+	************************************************
+				11. Bootstrap Overwrite CSS
+	************************************************
+************************************************/
+/************* 11.1 Badge *************/
+.badge {
+	font-weight: 400;
+	font-size: 0.875rem;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+  }
+  .badge.shade-green, .page-header .badge.toggle-sidebar, .page-header .badge.toggle-sidebar-fullscreen, .page-header .badge.sidebar-togglescreen, .header-profile a.user-settings .avatar .badge.status.online {
+	outline: 1px solid #2c998d;
+	outline-offset: 3px;
+  }
+  .badge.green {
+	background: #158c7f;
+  }
+  .badge.shade-light-green {
+	outline: 1px solid #2c998d;
+	background-color: #e6fffc;
+	outline-offset: 3px;
+	color: #158c7f;
+  }
+  .badge.shade-red, .page-header .badge.toggle-sidebar:hover, .page-header .badge.toggle-sidebar-fullscreen:hover, .page-header .badge.sidebar-togglescreen:hover, .header-profile a.user-settings .avatar .badge.status.busy {
+	outline: 1px solid #e4515e;
+	outline-offset: 3px;
+  }
+  .badge.red {
+	background: #e13d4b;
+  }
+  .badge.shade-light-red {
+	outline: 1px solid #e4515e;
+	background-color: #fff2f3;
+	outline-offset: 3px;
+	color: #e13d4b;
+  }
+  .badge.shade-yellow, .header-profile a.user-settings .avatar .badge.status.away {
+	outline: 1px solid #ffb31b;
+	outline-offset: 3px;
+  }
+  .badge.yellow {
+	background: #fda901;
+  }
+  .badge.shade-light-yellow {
+	outline: 1px solid #ffb31b;
+	background-color: #fff7e8;
+	outline-offset: 3px;
+	color: #fda901;
+  }
+  .badge.shade-blue {
+	outline: 1px solid #276dd9;
+	outline-offset: 3px;
+  }
+  .badge.blue {
+	background: #276dd9;
+  }
+  .badge.shade-light-blue {
+	outline: 1px solid #337ce9;
+	background-color: #eaf2ff;
+	outline-offset: 3px;
+	color: #276dd9;
+  }
+  .badge.shade-purple {
+	outline: 1px solid #7920d1;
+	outline-offset: 3px;
+  }
+  .badge.purple {
+	background: #7920d1;
+  }
+  .badge.shade-light-purple {
+	outline: 1px solid #8736d6;
+	background-color: #f5ebff;
+	outline-offset: 3px;
+	color: #7920d1;
+  }
+  .badge.shade-orange {
+	outline: 1px solid #dd5500;
+	outline-offset: 3px;
+  }
+  .badge.orange {
+	background: #dd5500;
+  }
+  .badge.shade-light-orange {
+	outline: 1px solid #e1661b;
+	background-color: #fff1eb;
+	outline-offset: 3px;
+	color: #dd5500;
+  }
+  .badge.shade-secondary {
+	outline: 1px solid #7e8c9e;
+	outline-offset: 3px;
+  }
+  .badge.secondary {
+	background: #707f93;
+  }
+  .badge.shade-light-secondary {
+	outline: 1px solid #a4afbc;
+	background-color: #f0f4f8;
+	outline-offset: 3px;
+	color: #707f93;
+  }
+  .badge.shade-primary, .page-item.active .badge.page-link {
+	outline: 1px solid #245fae;
+	outline-offset: 3px;
+  }
+  .badge.primary {
+	background: #1553a3;
+  }
+  .badge.shade-light-primary {
+	outline: 1px solid #6590c9;
+	background-color: #e6f1ff;
+	outline-offset: 3px;
+	color: #1553a3;
+  }
+  .badge.shade-light {
+	outline: 1px solid #dde2e7;
+	outline-offset: 3px;
+  }
+  .badge.light {
+	background: #eff2f5;
+  }
+  .badge.shade-light-light {
+	outline: 1px solid #a6b2bd;
+	background-color: #dde2e7;
+	outline-offset: 3px;
+	color: #748696;
+  }
+  .badge.shade-dark {
+	outline: 1px solid #475560;
+	outline-offset: 3px;
+  }
+  .badge.dark {
+	background: #34424e;
+  }
+  .badge.shade-light-dark {
+	outline: 1px solid #7a8792;
+	background-color: #e1ebf4;
+	outline-offset: 3px;
+	color: #34424e;
+  }
+  
