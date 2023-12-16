@@ -5,6 +5,7 @@ import { CreateProductRoutingModule } from './create-product-routing.module';
 import { CreateProductComponent } from './create-product.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [CreateProductComponent],
@@ -12,7 +13,8 @@ import {MatInputModule} from '@angular/material/input';
     CommonModule,
     CreateProductRoutingModule,
     MatAutocompleteModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ]
 })
 export class CreateProductModule { }

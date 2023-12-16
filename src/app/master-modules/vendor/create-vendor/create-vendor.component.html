@@ -47,60 +47,70 @@
                     </div>
                     <div class="card-body">
                         <div class="create-invoice-wrapper">
-                            <!-- Row start -->
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                    <div class="row">
-                                    <!-- Row start -->
-                                    <div class="row">
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="customerName" class="form-label">Bank Name</label>
-                                                <input type="text" id="customerName" class="form-control"
-                                                    placeholder="Enter Bank Name" />
+                            <form [formGroup]="createBankForm" (ngSubmit)="submitBankForm()">
+                                <!-- Row start -->
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <div class="row">
+                                        <!-- Row start -->
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                <!-- Form group start -->
+                                                <div class="mb-3">
+                                                    <label for="customerName" class="form-label">Bank Name</label>
+                                                    <input type="text" id="customerName" class="form-control"
+                                                        placeholder="Enter Bank Name" formControlName="bankName" />
+                                                    <span *ngIf="createBankForm.get('bankName').touched && createBankForm.get('bankName').hasError('required')" class="text-red">Bank Name Required</span>
+                                                </div>
+                                                <!-- Form group end -->
                                             </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="invEmail" class="form-label">Account No.</label>
-                                                <input type="text" id="invEmail" class="form-control"
-                                                    placeholder="Enter Account No." />
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                <!-- Form group start -->
+                                                <div class="mb-3">
+                                                    <label for="invEmail" class="form-label">Account No.</label>
+                                                    <input type="text" id="invEmail" class="form-control"
+                                                        placeholder="Enter Account No." formControlName="account" />
+                                                    <span *ngIf="createBankForm.get('account').touched && createBankForm.get('account').hasError('required')" class="text-red">Account No. Required</span>
+                                                </div>
+                                                <!-- Form group end -->
                                             </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="invPhoneNumber" class="form-label">Company Name/Account Name</label>
-                                                <input type="text" id="invPhoneNumber" class="form-control"
-                                                    placeholder="Enter Company Name/Account Name" />
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                <!-- Form group start -->
+                                                <div class="mb-3">
+                                                    <label for="invPhoneNumber" class="form-label">Company Name/Account Name</label>
+                                                    <input type="text" id="invPhoneNumber" class="form-control"
+                                                        placeholder="Enter Company Name/Account Name" formControlName="companyName" />
+                                                    <span *ngIf="createBankForm.get('companyName').touched && createBankForm.get('companyName').hasError('required')" class="text-red">Company Name/Account Name Required</span>
+                                                </div>
+                                                <!-- Form group end -->
                                             </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="invBankName" class="form-label">IBAN No.</label>
-                                                <input type="text" id="invBankName" class="form-control"
-                                                    placeholder="Enter IBAN No." maxlength="21" (focusin)="addPrefix()" [value]="inputValue" />
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                <!-- Form group start -->
+                                                <div class="mb-3">
+                                                    <label for="invBankName" class="form-label">IBAN No.</label>
+                                                    <input type="text" id="invBankName" class="form-control"
+                                                        placeholder="Enter IBAN No." maxlength="21" (focusin)="addPrefix()" [value]="inputValue" formControlName="ibanNo"/>
+                                                    <span *ngIf="createBankForm.get('ibanNo').touched && createBankForm.get('ibanNo').hasError('required')" class="text-red">IBAN No. Required</span>
+                                                </div>
+                                                <!-- Form group end -->
                                             </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                            <!-- Form group start -->
-                                            <div class="mb-2">
-                                                <label for="msgCustomer" class="form-label">Message</label>
-                                                <textarea rows="3" id="msgCustomer" class="form-control"></textarea>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                <!-- Form group start -->
+                                                <div class="mb-2">
+                                                    <label for="msgCustomer" class="form-label">Message</label>
+                                                    <textarea rows="3" id="msgCustomer" class="form-control"formControlName=message></textarea>
+                                                    <span *ngIf="createBankForm.get('message').touched && createBankForm.get('message').hasError('required')" class="text-red">Message Required</span>
+                                                </div>
+                                                <!-- Form group end -->
                                             </div>
-                                            <!-- Form group end -->
                                         </div>
+                                        <!-- Row end -->
                                     </div>
-                                    <!-- Row end -->
+                                    <button class="btn btn-info mt-3" type="submit">
+                                        Submit
+                                    </button>
                                 </div>
-                            </div>
-                            <!-- Row end -->
+                                <!-- Row end -->
+                            </form>
                         </div>
 
                         <!-- Row start -->
