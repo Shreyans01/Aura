@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-vendor.component.scss']
 })
 export class CreateVendorComponent {
+  inputValue: string = '';
 
+
+  addPrefix() {
+    this.inputValue = 'AE-'
+  }
+  
 }

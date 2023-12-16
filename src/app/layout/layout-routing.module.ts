@@ -51,6 +51,14 @@ const routes: Routes = [
     {
       path: 'manage-vendor',
       loadChildren: () => import('../master-modules/vendor/manage-vendor/manage-vendor.module').then(m => m.ManageVendorModule)
+    },
+    {
+      path: 'manage-transaction',
+      loadChildren: () => import('../master-modules/traansaction-form/transaction-form.module').then(m => m.TransactionFormModule)
+    },
+    {
+      path: 'manage-company',
+      loadChildren: () => import('../master-modules/company-form/company-form.module').then(m => m.CompanyFormModule)
     }
   ]
 },

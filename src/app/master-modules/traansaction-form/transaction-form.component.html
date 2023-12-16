@@ -1,0 +1,220 @@
+<!-- Content wrapper scroll start -->
+<div class="content-wrapper-scroll">
+
+    <!-- Main header starts -->
+    <div class="main-header d-flex align-items-center justify-content-between position-relative">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="page-icon pe-3">
+                <i class="bi bi-stickies"></i>
+            </div>
+            <div class="page-title d-none d-md-block">
+                <h5>Transaction Form</h5>
+            </div>
+        </div>
+        <!-- Live updates start -->
+        <ul class="updates d-flex align-items-end flex-column overflow-hidden" id="updates">
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-envelope-paper text-red font-2x me-2"></i>
+                    <span>12 emails from David Michaiah.</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-bar-chart text-blue font-2x me-2"></i>
+                    <span>15new features updated successfully.</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-folder-check text-yellow font-2x me-2"></i>
+                    <span>The media folder is created successfully.</span>
+                </a>
+            </li>
+        </ul>
+        <!-- Live updates end -->
+    </div>
+    <!-- Main header ends -->
+
+    <!-- Content wrapper start -->
+    <div class="content-wrapper">
+        <!-- Row start -->
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Create Transaction Form </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="create-invoice-wrapper">
+                            <!-- Row start -->
+                            <div class="row">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <!-- Row start -->
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="customerName" class="form-label">Date</label>
+                                                <input type="date" id="customerName" class="form-control"
+                                                    placeholder="Enter Date" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="customerName" class="form-label">Outlet Name</label>
+                                                <input type="text" id="customerName" class="form-control"
+                                                    placeholder="Enter Outlet Name" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="customerName" class="form-label">Outlet ID</label>
+                                                <input type="text" id="customerName" class="form-control"
+                                                    placeholder="Enter Outlet ID" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invPhoneNumber" class="form-label">Terminal ID</label>
+                                                <input type="text" id="invPhoneNumber" class="form-control"
+                                                    placeholder="Enter Terminal ID" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invPhoneNumber" class="form-label">Transaction Type</label>
+                                                <input type="text" placeholder="Pick one" aria-label="Number"
+                                                    class="form-select" matInput [matAutocomplete]="auto">
+                                                <mat-autocomplete #auto="matAutocomplete">
+                                                    <mat-option *ngFor="let option of options" [value]="option">
+                                                        {{option}}
+                                                    </mat-option>
+                                                </mat-autocomplete>
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="mb-3">
+                                                <label for="invPhoneNumber" class="form-label">Terminal Type (Intl.)</label>
+                                                <input type="text" id="invPhoneNumber" class="form-control"
+                                                    placeholder="Enter Terminal Type (Intl.)" />
+                                            </div>
+                                        </div> -->
+
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invBankName" class="form-label">Transaction Amount</label>
+                                                <input type="text" id="invBankName" class="form-control"
+                                                    placeholder="Enter Transaction Amount" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invBankName" class="form-label">Service Charge</label>
+                                                <input type="text" id="invBankName" class="form-control"
+                                                    placeholder="Enter Service Charge" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invBankName" class="form-label">Amount Payable</label>
+                                                <input type="text" id="invBankName" class="form-control"
+                                                    placeholder="Enter Amount Payable" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="mb-3">
+                                                <label for="invBankPercentage" class="form-label">Assigned Outlet
+                                                </label>
+                                                <input type="text" id="invBankPercentage" class="form-control"
+                                                    placeholder="Enter Assigned Outlet" />
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <!-- Row end -->
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                        </div>
+
+                        <!-- Row start -->
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <!-- Form group start -->
+                                <div class="mb-2">
+                                    <label for="msgCustomer" class="form-label">Transaction Summary</label>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross Transaction Amount(Dom.) 
+                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
+                                    </label>
+                                    <!-- <div><input type="text" id="invBankName" /></div> -->
+                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross Transaction Amount(Intl.)
+                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
+                                    </label>
+                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross Transaction Amount(Variable.)
+                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
+                                    </label>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service Charge Amount(Dom.) 
+                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
+                                    </label>
+                                    <!-- <div><input type="text" id="invBankName" /></div> -->
+                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service Charge Amount(Intl.)
+                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
+                                    </label>
+                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service Charge Amount(Variable.)
+                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
+                                    </label>
+                                </div>
+
+                                <div style="margin-left: 1000px;">
+                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Net Payable
+                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
+                                    </label>
+                                </div>
+                                <!-- <div class="mb-2">
+                                    <label for="msgCustomer" class="form-label">Gross Transaction Amount</label>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="msgCustomer" class="form-label">Gross Transaction Amount</label>
+                                </div> -->
+                                <!-- Form group end -->
+                            </div>
+                        </div>
+                        <!-- Row end -->
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                            <!-- Form group start -->
+                            <div class="mb-2">
+                                <label for="msgCustomer" class="form-label">Message/Remarks</label>
+                                <textarea rows="3" id="msgCustomer" class="form-control"></textarea>
+                            </div>
+                            <!-- Form group end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row end -->
+
+    </div>
+    <!-- Content wrapper end -->
+
+</div>
+<!-- Content wrapper scroll end -->

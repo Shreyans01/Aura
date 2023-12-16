@@ -1,1 +1,236 @@
-<p>create-pos works!</p>
+<!-- Content wrapper scroll start -->
+<div class="content-wrapper-scroll">
+
+    <!-- Main header starts -->
+    <div class="main-header d-flex align-items-center justify-content-between position-relative">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="page-icon pe-3">
+                <i class="bi bi-stickies"></i>
+            </div>
+            <div class="page-title d-none d-md-block">
+                <h5>POS Master</h5>
+            </div>
+        </div>
+        <!-- Live updates start -->
+        <ul class="updates d-flex align-items-end flex-column overflow-hidden" id="updates">
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-envelope-paper text-red font-2x me-2"></i>
+                    <span>12 emails from David Michaiah.</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-bar-chart text-blue font-2x me-2"></i>
+                    <span>15new features updated successfully.</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="bi bi-folder-check text-yellow font-2x me-2"></i>
+                    <span>The media folder is created successfully.</span>
+                </a>
+            </li>
+        </ul>
+        <!-- Live updates end -->
+    </div>
+    <!-- Main header ends -->
+
+    <!-- Content wrapper start -->
+    <div class="content-wrapper">
+        <!-- Row start -->
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Create POS Master </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="create-invoice-wrapper">
+                            <!-- Row start -->
+                            <div class="row">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <!-- Row start -->
+                                    <div class="row">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="customerName" class="form-label">Merchant Name</label>
+                                                <input type="text" id="customerName" class="form-control"
+                                                    placeholder="Enter Merchant Name" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="customerName" class="form-label">Merchant ID</label>
+                                                <input type="text" id="customerName" class="form-control"
+                                                    placeholder="Enter Merchant ID" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invBankName" class="form-label">Bank Name/Service Provider
+                                                    Name</label>
+                                                <input type="text" id="invBankName" class="form-control"
+                                                    placeholder="Bank Name/Service Provider Name" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invPhoneNumber" class="form-label">Terminal ID</label>
+                                                <input type="text" id="invPhoneNumber" class="form-control"
+                                                    placeholder="Enter Terminal ID" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invPhoneNumber" class="form-label">Terminal Model
+                                                    Number</label>
+                                                <input type="text" id="invPhoneNumber" class="form-control"
+                                                    placeholder="Enter Terminal Model Number" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invPhoneNumber" class="form-label">Terminal Serial
+                                                    Number</label>
+                                                <input type="text" id="invPhoneNumber" class="form-control"
+                                                    placeholder="Enter Serial Number" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invBankName" class="form-label">Bank
+                                                    percentage(Dom.)</label>
+                                                <input type="text" id="invBankName" class="form-control"
+                                                    placeholder="Enter Bank percentage Domestic" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invBankName" class="form-label">Bank
+                                                    percentage(Intl.)</label>
+                                                <input type="text" id="invBankName" class="form-control"
+                                                    placeholder="Enter Bank percentage International" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invEmail" class="form-label">Bank
+                                                    Percentage(Variable)</label>
+                                                <!-- <input type="text" placeholder="Pick one" aria-label="Number" class="form-select" matInput [matAutocomplete]="auto">
+                                                <mat-autocomplete #auto="matAutocomplete">
+                                                  <mat-option *ngFor="let option of options" [value]="option">
+                                                    {{option}}
+                                                  </mat-option>
+                                                </mat-autocomplete> -->
+
+                                                <!-- <input matInput placeholder="Bank Percentage" aria-label="Bank Percentage"
+                                                    [matAutocomplete]="auto" class="form-select" [ngModel]="optletPerc" >
+                                                <mat-autocomplete #auto="matAutocomplete">
+                                                    <mat-option *ngFor="let option of options"
+                                                        [value]="option">
+                                                        {{option}}
+                                                    </mat-option>
+                                                </mat-autocomplete> -->
+
+                                                <form class="example-form">
+                                                    <input type="text"
+                                                           placeholder="Bank Percentage"
+                                                           [formControl]="control"
+                                                           [matAutocomplete]="auto" class="form-control">
+                                                    <mat-autocomplete #auto="matAutocomplete">
+                                                      <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                                                        {{street}}
+                                                      </mat-option>
+                                                    </mat-autocomplete>
+                                                    
+                                                  </form>
+
+                                                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" *ngIf="control.value == 'custom'">
+                                                    <!-- Form group start -->
+                                                    <div class="mb-3">
+                                                        <label for="invBankName" class="form-label">Bank
+                                                            percentage(Intl.)</label>
+                                                            <input type="text" id="invBankName" class="form-control" 
+                                                            placeholder="Enter Bank percentage" />
+                                                    </div>
+                                                    <!-- Form group end -->
+                                                </div>
+
+
+
+
+                                                <!-- <select class="form-select">
+                                                    <option>Select Outler Percentage</option>
+                                                    <option>4%</option>
+                                                    <option>6%</option>
+                                                    <option>10%</option>
+                                                    <option>Custom</option>
+                                                </select> -->
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="mb-3">
+                                                <label for="invBankPercentage" class="form-label">Assigned Outlet
+                                                </label>
+                                                <input type="text" id="invBankPercentage" class="form-control"
+                                                    placeholder="Enter Assigned Outlet" />
+                                            </div>
+                                        </div> -->
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-3">
+                                                <label for="invNumber" class="form-label">Payment Account</label>
+                                                <input type="text" id="invNumber" class="form-control"
+                                                    placeholder="Enter Payment Account" />
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <!-- Form group start -->
+                                            <div class="mb-2">
+                                                <label for="msgCustomer" class="form-label">Message</label>
+                                                <textarea rows="3" id="msgCustomer" class="form-control"></textarea>
+                                            </div>
+                                            <!-- Form group end -->
+                                        </div>
+
+                                    </div>
+                                    <!-- Row end -->
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                        </div>
+
+                        <!-- Row start -->
+
+                        <!-- Row end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row end -->
+
+    </div>
+    <!-- Content wrapper end -->
+
+</div>
+<!-- Content wrapper scroll end -->

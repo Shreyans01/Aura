@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./manage-vendor.component.scss']
 })
 export class ManageVendorComponent {
+  options:string[] = ['4%','6%','10%', 'custom']
+  optletPerc:any;
+  handleFileInput(event: Event) {
 
+    // const file = (event.target as HTMLInputElement).files[0];
+    
+    // this.writeValue({
+    //   file
+    // });
+  }
 }

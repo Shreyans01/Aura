@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ManageVendorRoutingModule } from './manage-vendor-routing.module';
-import { ManageVendorComponent } from './manage-vendor.component';
+import { CompanyFormRoutingModule } from './company-form-routing.module';
+import { CompanyFormComponent } from './company-form.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [ManageVendorComponent],
+  declarations: [CompanyFormComponent],
   imports: [
     CommonModule,
-    ManageVendorRoutingModule,
+    CompanyFormRoutingModule,
     MatAutocompleteModule,
     MatInputModule,
     FormsModule
-    
   ]
 })
-export class ManageVendorModule { }
+export class CompanyFormModule { }

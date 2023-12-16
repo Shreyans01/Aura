@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CreateCustomerComponent {
 
+
+  handleFileInput(event: Event) {
+  }
 }
