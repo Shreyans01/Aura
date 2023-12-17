@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-transaction-form',
@@ -17,11 +17,6 @@ export class TransactionFormComponent implements OnInit {
       date: ['', [Validators.required]],
       outletName: ['', [Validators.required]],
       outletId: ['', [Validators.required]],
-      terminalId: ['', [Validators.required]],
-      transactionType: ['', [Validators.required]],
-      transactionAmount: ['', [Validators.required]],
-      charge: ['', [Validators.required]],
-      amount: ['', [Validators.required]],
       grossTransAmountDom: ['', [Validators.required]],
       grossTransAmountIntl: ['', [Validators.required]],
       grossTransAmountVar: ['', [Validators.required]],
@@ -30,11 +25,37 @@ export class TransactionFormComponent implements OnInit {
       serviceChargeAmountVar: ['', [Validators.required]],
       netPayable: ['', [Validators.required]],
       message: ['', [Validators.required]],
+      transactionArray: this._formBuilder.array([
+        this.createTransactionArray(),
+      ]),
     });
   }
 
   submitTransactionForm() {
     this.createTransactionForm.markAllAsTouched();
     console.log('Submit', this.createTransactionForm.value);
+  }
+
+  addTransaction(): void {
+    var transactionArray = this.createTransactionForm.get(
+      'transactionArray'
+    ) as FormArray;
+    transactionArray.push(this.createTransactionArray());
+  }
+
+  createTransactionArray(): FormGroup {
+    return this._formBuilder.group({
+      terminalId: ['', [Validators.required]],
+      transactionType: ['', [Validators.required]],
+      transactionAmount: ['', [Validators.required]],
+      charge: ['', [Validators.required]],
+      amount: ['', [Validators.required]],
+    });
+  }
+  deleteTransactionArray(index: number) {
+    var transactionArray = this.createTransactionForm.get(
+      'transactionArray'
+    ) as FormArray;
+    transactionArray.removeAt(index);
   }
 }
