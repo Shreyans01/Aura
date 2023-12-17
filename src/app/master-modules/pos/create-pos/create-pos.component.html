@@ -58,8 +58,11 @@
                                                 <div class="mb-3">
                                                     <label for="customerName" class="form-label">Merchant Name</label>
                                                     <input type="text" id="customerName" class="form-control"
-                                                        placeholder="Enter Merchant Name" formControlName="MerchantName" />
-                                                    <span *ngIf="createPosForm.get('MerchantName').touched && createPosForm.get('MerchantName').hasError('required')" class="text-red">Merchant Name Required</span>
+                                                        placeholder="Enter Merchant Name"
+                                                        formControlName="MerchantName" />
+                                                    <span
+                                                        *ngIf="createPosForm.get('MerchantName').touched && createPosForm.get('MerchantName').hasError('required')"
+                                                        class="text-red">Merchant Name Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -68,19 +71,25 @@
                                                 <div class="mb-3">
                                                     <label for="customerName" class="form-label">Merchant ID</label>
                                                     <input type="text" id="customerName" class="form-control"
-                                                        placeholder="Enter Merchant ID" formControlName="MerchantId"/>
-                                                    <span *ngIf="createPosForm.get('MerchantId').touched && createPosForm.get('MerchantId').hasError('required')" class="text-red">Merchant ID Required</span>
+                                                        placeholder="Enter Merchant ID" formControlName="MerchantId" />
+                                                    <span
+                                                        *ngIf="createPosForm.get('MerchantId').touched && createPosForm.get('MerchantId').hasError('required')"
+                                                        class="text-red">Merchant ID Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <!-- Form group start -->
                                                 <div class="mb-3">
-                                                    <label for="invBankName" class="form-label">Bank Name/Service Provider
+                                                    <label for="invBankName" class="form-label">Bank Name/Service
+                                                        Provider
                                                         Name</label>
                                                     <input type="text" id="invBankName" class="form-control"
-                                                        placeholder="Bank Name/Service Provider Name" formControlName="bankName"/>
-                                                    <span *ngIf="createPosForm.get('bankName').touched && createPosForm.get('bankName').hasError('required')" class="text-red">Bank Name/Service Provider Name Required</span>
+                                                        placeholder="Bank Name/Service Provider Name"
+                                                        formControlName="bankName" />
+                                                    <span
+                                                        *ngIf="createPosForm.get('bankName').touched && createPosForm.get('bankName').hasError('required')"
+                                                        class="text-red">Bank Name/Service Provider Name Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -90,7 +99,9 @@
                                                     <label for="invPhoneNumber" class="form-label">Terminal ID</label>
                                                     <input type="text" id="invPhoneNumber" class="form-control"
                                                         placeholder="Enter Terminal ID" formControlName="terminalId" />
-                                                    <span *ngIf="createPosForm.get('terminalId').touched && createPosForm.get('terminalId').hasError('required')" class="text-red">Terminal ID Required</span>
+                                                    <span
+                                                        *ngIf="createPosForm.get('terminalId').touched && createPosForm.get('terminalId').hasError('required')"
+                                                        class="text-red">Terminal ID Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -100,8 +111,11 @@
                                                     <label for="invPhoneNumber" class="form-label">Terminal Model
                                                         Number</label>
                                                     <input type="text" id="invPhoneNumber" class="form-control"
-                                                        placeholder="Enter Terminal Model Number" formControlName="terminalModelNumber" />
-                                                    <span *ngIf="createPosForm.get('terminalModelNumber').touched && createPosForm.get('terminalModelNumber').hasError('required')" class="text-red">Terminal Model Number Required</span>
+                                                        placeholder="Enter Terminal Model Number"
+                                                        formControlName="terminalModelNumber" />
+                                                    <span
+                                                        *ngIf="createPosForm.get('terminalModelNumber').touched && createPosForm.get('terminalModelNumber').hasError('required')"
+                                                        class="text-red">Terminal Model Number Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -111,8 +125,11 @@
                                                     <label for="invPhoneNumber" class="form-label">Terminal Serial
                                                         Number</label>
                                                     <input type="text" id="invPhoneNumber" class="form-control"
-                                                        placeholder="Enter Serial Number" formControlName="terminalSerialNumber" />
-                                                    <span *ngIf="createPosForm.get('terminalSerialNumber').touched && createPosForm.get('terminalSerialNumber').hasError('required')" class="text-red">Terminal Serial Number Required</span>
+                                                        placeholder="Enter Serial Number"
+                                                        formControlName="terminalSerialNumber" />
+                                                    <span
+                                                        *ngIf="createPosForm.get('terminalSerialNumber').touched && createPosForm.get('terminalSerialNumber').hasError('required')"
+                                                        class="text-red">Terminal Serial Number Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -122,8 +139,11 @@
                                                     <label for="invBankName" class="form-label">Bank
                                                         percentage(Dom.)</label>
                                                     <input type="text" id="invBankName" class="form-control"
-                                                        placeholder="Enter Bank percentage Domestic"  formControlName="percentageDom"/>
-                                                    <span *ngIf="createPosForm.get('percentageDom').touched && createPosForm.get('percentageDom').hasError('required')" class="text-red">Bank percentage Domestic Required</span>
+                                                        placeholder="Enter Bank percentage Domestic"
+                                                        formControlName="percentageDom" />
+                                                    <span
+                                                        *ngIf="createPosForm.get('percentageDom').touched && createPosForm.get('percentageDom').hasError('required')"
+                                                        class="text-red">Bank percentage Domestic Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -133,8 +153,11 @@
                                                     <label for="invBankName" class="form-label">Bank
                                                         percentage(Intl.)</label>
                                                     <input type="text" id="invBankName" class="form-control"
-                                                        placeholder="Enter Bank percentage International" formControlName="percentageIntl" />
-                                                    <span *ngIf="createPosForm.get('percentageIntl').touched && createPosForm.get('percentageIntl').hasError('required')" class="text-red">Bank percentage International Required</span>
+                                                        placeholder="Enter Bank percentage International"
+                                                        formControlName="percentageIntl" />
+                                                    <span
+                                                        *ngIf="createPosForm.get('percentageIntl').touched && createPosForm.get('percentageIntl').hasError('required')"
+                                                        class="text-red">Bank percentage International Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -160,25 +183,28 @@
                                                     </mat-autocomplete> -->
 
                                                     <form class="example-form">
-                                                        <input type="text"
-                                                            placeholder="Bank Percentage"
-                                                            formControlName="percentageVar"
-                                                            [matAutocomplete]="auto" class="form-control">
+                                                        <input type="text" placeholder="Bank Percentage"
+                                                            formControlName="percentageVar" [matAutocomplete]="auto"
+                                                            class="form-control">
                                                         <mat-autocomplete #auto="matAutocomplete">
-                                                        <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
-                                                            {{street}}
-                                                        </mat-option>
+                                                            <mat-option *ngFor="let street of filteredStreets | async"
+                                                                [value]="street">
+                                                                {{street}}
+                                                            </mat-option>
                                                         </mat-autocomplete>
-                                                        <span *ngIf="createPosForm.get('percentageVar').touched && createPosForm.get('percentageVar').hasError('required')" class="text-red">Bank percentage Required</span>
-                                                        
+                                                        <span
+                                                            *ngIf="createPosForm.get('percentageVar').touched && createPosForm.get('percentageVar').hasError('required')"
+                                                            class="text-red">Bank percentage Required</span>
+
                                                     </form>
 
-                                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" *ngIf="control.value == 'custom'">
+                                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
+                                                        *ngIf="control.value == 'custom'">
                                                         <!-- Form group start -->
                                                         <div class="mb-3">
                                                             <label for="invBankName" class="form-label">Bank
                                                                 percentage(Intl.)</label>
-                                                                <input type="text" id="invBankName" class="form-control" 
+                                                            <input type="text" id="invBankName" class="form-control"
                                                                 placeholder="Enter Bank percentage" />
                                                         </div>
                                                         <!-- Form group end -->
@@ -210,8 +236,10 @@
                                                 <div class="mb-3">
                                                     <label for="invNumber" class="form-label">Payment Account</label>
                                                     <input type="text" id="invNumber" class="form-control"
-                                                        placeholder="Enter Payment Account"  formControlName="account"/>
-                                                    <span *ngIf="createPosForm.get('account').touched && createPosForm.get('account').hasError('required')" class="text-red">Payment Account Required</span>
+                                                        placeholder="Enter Payment Account" formControlName="account" />
+                                                    <span
+                                                        *ngIf="createPosForm.get('account').touched && createPosForm.get('account').hasError('required')"
+                                                        class="text-red">Payment Account Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -219,8 +247,11 @@
                                                 <!-- Form group start -->
                                                 <div class="mb-2">
                                                     <label for="msgCustomer" class="form-label">Message</label>
-                                                    <textarea rows="3" id="msgCustomer" class="form-control" formControlName="message"></textarea>
-                                                    <span *ngIf="createPosForm.get('message').touched && createPosForm.get('message').hasError('required')" class="text-red">Message Required</span>
+                                                    <textarea rows="3" id="msgCustomer" class="form-control"
+                                                        formControlName="message"></textarea>
+                                                    <span
+                                                        *ngIf="createPosForm.get('message').touched && createPosForm.get('message').hasError('required')"
+                                                        class="text-red">Message Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -228,11 +259,12 @@
                                         </div>
                                         <!-- Row end -->
                                     </div>
-                                    <button class="btn btn-info mt-3" type="submit">
-                                        Submit
-                                    </button>
+
                                 </div>
-                            <!-- Row end -->
+                                <button class="btn btn-info mt-3" type="submit">
+                                    Submit
+                                </button>
+                                <!-- Row end -->
                             </form>
                         </div>
 

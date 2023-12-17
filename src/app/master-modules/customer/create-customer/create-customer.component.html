@@ -47,8 +47,8 @@
                     </div>
                     <div class="card-body">
                         <div class="create-invoice-wrapper">
-                            <form  [formGroup]="createCustomerForm" (ngSubmit)="submitCustomerForm()">
-                            <!-- Row start -->
+                            <form [formGroup]="createCustomerForm" (ngSubmit)="submitCustomerForm()">
+                                <!-- Row start -->
                                 <div class="row">
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <!-- Row start -->
@@ -57,9 +57,11 @@
                                                 <!-- Form group start -->
                                                 <div class="mb-3">
                                                     <label for="customerName" class="form-label">Customer Name</label>
-                                                    <input type="text" id="customerName" class="form-control" formControlName="name"
-                                                        placeholder="Enter Customer Name" />
-                                                    <span *ngIf="createCustomerForm.get('name').touched && createCustomerForm.get('name').hasError('required')" class="text-red">Customer Name Required</span>
+                                                    <input type="text" id="customerName" class="form-control"
+                                                        formControlName="name" placeholder="Enter Customer Name" />
+                                                    <span
+                                                        *ngIf="createCustomerForm.get('name').touched && createCustomerForm.get('name').hasError('required')"
+                                                        class="text-red">Customer Name Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -69,27 +71,37 @@
                                                     <label for="invEmail" class="form-label">Customer Email</label>
                                                     <input type="text" id="invEmail" class="form-control"
                                                         placeholder="Enter Customer Email" formControlName="email" />
-                                                    <span *ngIf="createCustomerForm.get('email').touched && createCustomerForm.get('email').hasError('required')" class="text-red">Customer Email Required</span>
+                                                    <span
+                                                        *ngIf="createCustomerForm.get('email').touched && createCustomerForm.get('email').hasError('required')"
+                                                        class="text-red">Customer Email Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <!-- Form group start -->
                                                 <div class="mb-3">
-                                                    <label for="invPhoneNumber" class="form-label">Customer Phone Number</label>
-                                                    <input type="number" id="invPhoneNumber"           class="form-control" formControlName="phone"
-                                                    placeholder="Enter Customer Phone Number" />
-                                                    <span *ngIf="createCustomerForm.get('phone').touched && createCustomerForm.get('phone').hasError('required')" class="text-red">Customer Phone Required</span>
+                                                    <label for="invPhoneNumber" class="form-label">Customer Phone
+                                                        Number</label>
+                                                    <input type="number" id="invPhoneNumber" class="form-control"
+                                                        formControlName="phone"
+                                                        placeholder="Enter Customer Phone Number" />
+                                                    <span
+                                                        *ngIf="createCustomerForm.get('phone').touched && createCustomerForm.get('phone').hasError('required')"
+                                                        class="text-red">Customer Phone Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <!-- Form group start -->
                                                 <div class="mb-3">
-                                                    <label for="invBankName" class="form-label">Customer Bank Name</label>
-                                                    <input type="text" id="invBankName" class="form-control" formControlName="bankName"
+                                                    <label for="invBankName" class="form-label">Customer Bank
+                                                        Name</label>
+                                                    <input type="text" id="invBankName" class="form-control"
+                                                        formControlName="bankName"
                                                         placeholder="Enter Customer Bank Name" />
-                                                    <span *ngIf="createCustomerForm.get('bankName').touched && createCustomerForm.get('bankName').hasError('required')" class="text-red">Customer Bank Name Required</span>
+                                                    <span
+                                                        *ngIf="createCustomerForm.get('bankName').touched && createCustomerForm.get('bankName').hasError('required')"
+                                                        class="text-red">Customer Bank Name Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -99,7 +111,9 @@
                                                     <label for="invNumber" class="form-label">Customer UID</label>
                                                     <input type="text" id="invNumber" class="form-control"
                                                         placeholder="Enter Customer UID" formControlName="uid" />
-                                                    <span *ngIf="createCustomerForm.get('uid').touched && createCustomerForm.get('uid').hasError('required')" class="text-red">Customer UID Required</span>
+                                                    <span
+                                                        *ngIf="createCustomerForm.get('uid').touched && createCustomerForm.get('uid').hasError('required')"
+                                                        class="text-red">Customer UID Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -108,8 +122,10 @@
                                                 <div class="mb-3">
                                                     <label for="customerName" class="form-label">ID No.</label>
                                                     <input type="text" id="customerName" class="form-control"
-                                                        placeholder="Enter ID No." formControlName="idNo"/>
-                                                    <span *ngIf="createCustomerForm.get('idNo').touched && createCustomerForm.get('idNo').hasError('required')" class="text-red">Customer Id Required</span>
+                                                        placeholder="Enter ID No." formControlName="idNo" />
+                                                    <span
+                                                        *ngIf="createCustomerForm.get('idNo').touched && createCustomerForm.get('idNo').hasError('required')"
+                                                        class="text-red">Customer Id Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -118,8 +134,10 @@
                                                 <div class="mb-3">
                                                     <label for="customerName" class="form-label">ID Type</label>
                                                     <input type="text" id="customerName" class="form-control"
-                                                        placeholder="Enter ID Type"  formControlName="idType"/>
-                                                    <span *ngIf="createCustomerForm.get('idType').touched && createCustomerForm.get('idType').hasError('required')" class="text-red">Customer Id Type Required</span>
+                                                        placeholder="Enter ID Type" formControlName="idType" />
+                                                    <span
+                                                        *ngIf="createCustomerForm.get('idType').touched && createCustomerForm.get('idType').hasError('required')"
+                                                        class="text-red">Customer Id Type Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -128,8 +146,8 @@
                                                 <!-- Form group start -->
                                                 <div class="mb-3">
                                                     <label for="customerName" class="form-label">ID Upload</label>
-                                                    <input (change)="handleFileInput($event)" type="file" class="form-control" 
-                                                        placeholder="Enter ID Upload" />
+                                                    <input (change)="handleFileInput($event)" type="file"
+                                                        class="form-control" placeholder="Enter ID Upload" />
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -138,18 +156,21 @@
                                                 <!-- Form group start -->
                                                 <div class="mb-2">
                                                     <label for="msgCustomer" class="form-label">Message</label>
-                                                    <textarea rows="3" id="msgCustomer" class="form-control" formControlName="message"></textarea>
-                                                    <span *ngIf="createCustomerForm.get('message').touched && createCustomerForm.get('message').hasError('required')" class="text-red">Customer Message Required</span>
+                                                    <textarea rows="3" id="msgCustomer" class="form-control"
+                                                        formControlName="message"></textarea>
+                                                    <span
+                                                        *ngIf="createCustomerForm.get('message').touched && createCustomerForm.get('message').hasError('required')"
+                                                        class="text-red">Customer Message Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
                                         </div>
                                         <!-- Row end -->
                                     </div>
-                                    <button class="btn btn-info mt-3" type="submit">
-                                        Submit
-                                    </button>
                                 </div>
+                                <button class="btn btn-info mt-3" type="submit">
+                                    Submit
+                                </button>
                             </form>
                             <!-- Row end -->
                         </div>

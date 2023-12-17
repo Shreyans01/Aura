@@ -51,15 +51,17 @@
                             <div class="row">
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <form [formGroup]="createProductForm" (ngSubmit)="submitProductForm()">
-                                    <!-- Row start -->
+                                        <!-- Row start -->
                                         <div class="row">
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                 <!-- Form group start -->
                                                 <div class="mb-3">
                                                     <label for="customerName" class="form-label">Product Name</label>
                                                     <input type="text" id="customerName" class="form-control"
-                                                        placeholder="Enter Product Name" formControlName="name"/>
-                                                    <span *ngIf="createProductForm.get('name').touched && createProductForm.get('name').hasError('required')" class="text-red">Product Name Required</span>
+                                                        placeholder="Enter Product Name" formControlName="name" />
+                                                    <span
+                                                        *ngIf="createProductForm.get('name').touched && createProductForm.get('name').hasError('required')"
+                                                        class="text-red">Product Name Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -74,27 +76,37 @@
                                                         <option>test</option>
                                                         <option>test</option>
                                                     </select>
-                                                    <span *ngIf="createProductForm.get('unit').touched && createProductForm.get('unit').hasError('required')" class="text-red">Product Unit Required</span>
+                                                    <span
+                                                        *ngIf="createProductForm.get('unit').touched && createProductForm.get('unit').hasError('required')"
+                                                        class="text-red">Product Unit Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <!-- Form group start -->
                                                 <div class="mb-3">
-                                                    <label for="invPhoneNumber" class="form-label">Base Rate(Sale)</label>
+                                                    <label for="invPhoneNumber" class="form-label">Base
+                                                        Rate(Sale)</label>
                                                     <input type="text" id="invPhoneNumber" class="form-control"
-                                                        placeholder="Enter Base Rate(Sale)" formControlName="saleRate" />
-                                                    <span *ngIf="createProductForm.get('saleRate').touched && createProductForm.get('saleRate').hasError('required')" class="text-red">Base Rate(Sale) Required</span>
+                                                        placeholder="Enter Base Rate(Sale)"
+                                                        formControlName="saleRate" />
+                                                    <span
+                                                        *ngIf="createProductForm.get('saleRate').touched && createProductForm.get('saleRate').hasError('required')"
+                                                        class="text-red">Base Rate(Sale) Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <!-- Form group start -->
                                                 <div class="mb-3">
-                                                    <label for="invBankName" class="form-label">Base Rate(Purchase)</label>
+                                                    <label for="invBankName" class="form-label">Base
+                                                        Rate(Purchase)</label>
                                                     <input type="text" id="invBankName" class="form-control"
-                                                        placeholder="Enter Base Rate(Purchase)" formControlName="PurchaseRate" />
-                                                    <span *ngIf="createProductForm.get('PurchaseRate').touched && createProductForm.get('PurchaseRate').hasError('required')" class="text-red">Base Rate(Purchase) Required</span>
+                                                        placeholder="Enter Base Rate(Purchase)"
+                                                        formControlName="PurchaseRate" />
+                                                    <span
+                                                        *ngIf="createProductForm.get('PurchaseRate').touched && createProductForm.get('PurchaseRate').hasError('required')"
+                                                        class="text-red">Base Rate(Purchase) Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
@@ -102,16 +114,19 @@
                                                 <!-- Form group start -->
                                                 <div class="mb-2">
                                                     <label for="msgCustomer" class="form-label">Message</label>
-                                                    <textarea rows="3" id="msgCustomer" class="form-control" formControlName="message"></textarea>
-                                                    <span *ngIf="createProductForm.get('message').touched && createProductForm.get('message').hasError('required')" class="text-red">Message Required</span>
+                                                    <textarea rows="3" id="msgCustomer" class="form-control"
+                                                        formControlName="message"></textarea>
+                                                    <span
+                                                        *ngIf="createProductForm.get('message').touched && createProductForm.get('message').hasError('required')"
+                                                        class="text-red">Message Required</span>
                                                 </div>
                                                 <!-- Form group end -->
                                             </div>
-                                            <button class="btn btn-info mt-3" type="submit">
-                                                Submit
-                                            </button>
                                         </div>
-                                </form>
+                                        <button class="btn btn-info mt-3" type="submit">
+                                            Submit
+                                        </button>
+                                    </form>
                                     <!-- Row end -->
                                 </div>
                             </div>
