@@ -7,7 +7,6 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [ManageVendorComponent],
   imports: [
@@ -16,8 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatAutocompleteModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
-    
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class ManageVendorModule { }
+export class ManageVendorModule {}
