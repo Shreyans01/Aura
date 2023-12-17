@@ -5,7 +5,7 @@ import { CompanyFormRoutingModule } from './company-form-routing.module';
 import { CompanyFormComponent } from './company-form.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     CompanyFormRoutingModule,
     MatAutocompleteModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CompanyFormModule { }

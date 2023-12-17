@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TransactionFormRoutingModule } from './transaction-form-routing.module';
 import { TransactionFormComponent } from './transaction-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
@@ -15,7 +15,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     TransactionFormRoutingModule,
     MatAutocompleteModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class TransactionFormModule { }
