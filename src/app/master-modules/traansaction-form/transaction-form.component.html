@@ -46,63 +46,100 @@
                         <div class="card-title">Create Transaction Form </div>
                     </div>
                     <div class="card-body">
-                        <div class="create-invoice-wrapper">
-                            <!-- Row start -->
-                            <div class="row">
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                    <!-- Row start -->
-                                    <div class="row">
-                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="customerName" class="form-label">Date</label>
-                                                <input type="date" id="customerName" class="form-control"
-                                                    placeholder="Enter Date" />
+                        <form [formGroup]="createTransactionForm" (ngSubmit)="submitTransactionForm()">
+                            <div class="create-invoice-wrapper">
+                                <!-- Row start -->
+
+                                <div class="row">
+                                    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-6 col-12">
+                                        <!-- Row start -->
+                                        <div class="row">
+                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                <!-- Form group start -->
+                                                <div class="mb-3">
+                                                    <label for="customerName" class="form-label">Date</label>
+                                                    <input type="date" id="customerName" class="form-control"
+                                                        placeholder="Enter Date" formControlName="date" />
+                                                    <span
+                                                        *ngIf="createTransactionForm.get('date').touched && createTransactionForm.get('date').hasError('required')"
+                                                        class="text-red">Date Required</span>
+                                                </div>
+                                                <!-- Form group end -->
                                             </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="customerName" class="form-label">Outlet Name</label>
-                                                <input type="text" id="customerName" class="form-control"
-                                                    placeholder="Enter Outlet Name" />
+                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                <!-- Form group start -->
+                                                <div class="mb-3">
+                                                    <label for="customerName" class="form-label">Outlet Name</label>
+                                                    <input type="text" id="customerName" class="form-control"
+                                                        placeholder="Enter Outlet Name" formControlName="outletName" />
+                                                    <span
+                                                        *ngIf="createTransactionForm.get('outletName').touched && createTransactionForm.get('outletName').hasError('required')"
+                                                        class="text-red">Outlet Name Required</span>
+                                                </div>
+                                                <!-- Form group end -->
                                             </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="customerName" class="form-label">Outlet ID</label>
-                                                <input type="text" id="customerName" class="form-control"
-                                                    placeholder="Enter Outlet ID" />
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+                                                <!-- Form group start -->
+                                                <div class="mb-3">
+                                                    <label for="customerName" class="form-label">Outlet ID</label>
+                                                    <input type="text" id="customerName" class="form-control"
+                                                        placeholder="Enter Outlet ID" formControlName="outletId" />
+                                                    <span
+                                                        *ngIf="createTransactionForm.get('outletId').touched && createTransactionForm.get('outletId').hasError('required')"
+                                                        class="text-red">Outlet ID Required</span>
+                                                </div>
+                                                <!-- Form group end -->
                                             </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="invPhoneNumber" class="form-label">Terminal ID</label>
-                                                <input type="text" id="invPhoneNumber" class="form-control"
-                                                    placeholder="Enter Terminal ID" />
-                                            </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="invPhoneNumber" class="form-label">Transaction Type</label>
-                                                <input type="text" placeholder="Pick one" aria-label="Number"
-                                                    class="form-select" matInput [matAutocomplete]="auto">
-                                                <mat-autocomplete #auto="matAutocomplete">
-                                                    <mat-option *ngFor="let option of options" [value]="option">
-                                                        {{option}}
-                                                    </mat-option>
-                                                </mat-autocomplete>
-                                            </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div formArrayName="transactionArray">
+                                                <div>
+                                                    <button class="btn btn-info mt-3 float-end" (click)="addTransaction()"
+                                                        type="button"><i class="bi bi-plus"></i></button>
+                                                </div>
+                                                <ng-container
+                                                    *ngFor="let item of createTransactionForm.get('transactionArray').controls; let i = index;">
+                                                    <ng-container [formGroupName]="i">
+                                                        <div class="mb-3" *ngIf=" i >= 1">
+                                                            <hr>
+                                                        </div>
+                                                        <div
+                                                            class="d-inline-flex col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                                            <!-- Form group start -->
+                                                            <div class="mb-3">
+                                                                <label for="invPhoneNumber" class="form-label">Terminal
+                                                                    ID</label>
+                                                                <input type="text" id="invPhoneNumber"
+                                                                    class="form-control" placeholder="Enter Terminal ID"
+                                                                    formControlName="terminalId" />
+                                                                <span
+                                                                    *ngIf="item.get('terminalId').touched && item.get('terminalId').hasError('required')"
+                                                                    class="text-red">Terminal ID Required</span>
+                                                            </div>
+                                                            <!-- Form group end -->
+                                                        </div>
+                                                        <div
+                                                            class="d-inline-flex col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                                            <!-- Form group start -->
+                                                            <div class="mb-3">
+                                                                <label for="invPhoneNumber"
+                                                                    class="form-label">Transaction
+                                                                    Type</label>
+                                                                <input type="text" placeholder="Pick one"
+                                                                    aria-label="Number" class="form-select" matInput
+                                                                    [matAutocomplete]="auto"
+                                                                    formControlName="transactionType">
+                                                                <mat-autocomplete #auto="matAutocomplete">
+                                                                    <mat-option *ngFor="let option of options"
+                                                                        [value]="option">
+                                                                        {{option}}
+                                                                    </mat-option>
+                                                                </mat-autocomplete>
+                                                                <span
+                                                                    *ngIf="item.get('transactionType').touched && item.get('transactionType').hasError('required')"
+                                                                    class="text-red">Transaction Type Required</span>
+                                                            </div>
+                                                            <!-- Form group end -->
+                                                        </div>
+                                                        <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                             <div class="mb-3">
                                                 <label for="invPhoneNumber" class="form-label">Terminal Type (Intl.)</label>
                                                 <input type="text" id="invPhoneNumber" class="form-control"
@@ -110,34 +147,59 @@
                                             </div>
                                         </div> -->
 
-                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="invBankName" class="form-label">Transaction Amount</label>
-                                                <input type="text" id="invBankName" class="form-control"
-                                                    placeholder="Enter Transaction Amount" />
-                                            </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="invBankName" class="form-label">Service Charge</label>
-                                                <input type="text" id="invBankName" class="form-control"
-                                                    placeholder="Enter Service Charge" />
-                                            </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-                                            <!-- Form group start -->
-                                            <div class="mb-3">
-                                                <label for="invBankName" class="form-label">Amount Payable</label>
-                                                <input type="text" id="invBankName" class="form-control"
-                                                    placeholder="Enter Amount Payable" />
-                                            </div>
-                                            <!-- Form group end -->
-                                        </div>
-                                        <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                        <div
+                                                            class="d-inline-flex col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                                            <!-- Form group start -->
+                                                            <div class="mb-3">
+                                                                <label for="invBankName" class="form-label">Transaction
+                                                                    Amount</label>
+                                                                <input type="text" id="invBankName" class="form-control"
+                                                                    placeholder="Enter Transaction Amount"
+                                                                    formControlName="transactionAmount" />
+                                                                <span
+                                                                    *ngIf="item.get('transactionAmount').touched && item.get('transactionAmount').hasError('required')"
+                                                                    class="text-red">Transaction Amount Required</span>
+                                                            </div>
+                                                            <!-- Form group end -->
+                                                        </div>
+                                                        <div
+                                                            class="d-inline-flex col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                                            <!-- Form group start -->
+                                                            <div class="mb-3">
+                                                                <label for="invBankName" class="form-label">Service
+                                                                    Charge</label>
+                                                                <input type="text" id="invBankName" class="form-control"
+                                                                    placeholder="Enter Service Charge"
+                                                                    formControlName="charge" />
+                                                                <span
+                                                                    *ngIf="item.get('charge').touched && item.get('charge').hasError('required')"
+                                                                    class="text-red">Service Charge Required</span>
+                                                            </div>
+                                                            <!-- Form group end -->
+                                                        </div>
+                                                        <div
+                                                            class="d-inline-flex col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                                                            <!-- Form group start -->
+                                                            <div class="mb-3">
+                                                                <label for="invBankName" class="form-label">Amount
+                                                                    Payable</label>
+                                                                <input type="text" id="invBankName" class="form-control"
+                                                                    placeholder="Enter Amount Payable"
+                                                                    formControlName="amount" />
+                                                                <span
+                                                                    *ngIf="item.get('amount').touched && item.get('amount').hasError('required')"
+                                                                    class="text-red">Service Charge Required</span>
+                                                            </div>
+                                                            <div class="d-inline-flex col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"
+                                                                *ngIf=" i >= 1">
+                                                                <button class="btn mt-3"
+                                                                    (click)="deleteTransactionArray(i)">
+                                                                    <i class="bi bi-trash3 text-red"></i>
+                                                                </button>
+                                                            </div>
+                                                            <!-- Form group end -->
+                                                        </div>
+                                                        <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                             <div class="mb-3">
                                                 <label for="invBankPercentage" class="form-label">Assigned Outlet
                                                 </label>
@@ -145,68 +207,135 @@
                                                     placeholder="Enter Assigned Outlet" />
                                             </div>
                                         </div> -->
+                                                    </ng-container>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                        <!-- Row end -->
                                     </div>
-                                    <!-- Row end -->
                                 </div>
+                                <!-- Row end -->
                             </div>
-                            <!-- Row end -->
-                        </div>
 
-                        <!-- Row start -->
-                        <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <!-- Form group start -->
-                                <div class="mb-2">
-                                    <label for="msgCustomer" class="form-label">Transaction Summary</label>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross Transaction Amount(Dom.) 
-                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
-                                    </label>
-                                    <!-- <div><input type="text" id="invBankName" /></div> -->
-                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross Transaction Amount(Intl.)
-                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
-                                    </label>
-                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross Transaction Amount(Variable.)
-                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
-                                    </label>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service Charge Amount(Dom.) 
-                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
-                                    </label>
-                                    <!-- <div><input type="text" id="invBankName" /></div> -->
-                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service Charge Amount(Intl.)
-                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
-                                    </label>
-                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service Charge Amount(Variable.)
-                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
-                                    </label>
-                                </div>
+                            <!-- Row start -->
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <!-- Form group start -->
+                                    <div class="mb-2">
+                                        <label for="msgCustomer" class="form-label">Transaction Summary</label>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross
+                                            Transaction Amount(Dom.)
+                                            <div style="margin-top: 15px;">
+                                                <input type="text" class="form-control" id="invBankName"
+                                                    formControlName="grossTransAmountDom" />
+                                                <span
+                                                    *ngIf="createTransactionForm.get('grossTransAmountDom').touched && createTransactionForm.get('grossTransAmountDom').hasError('required')"
+                                                    class="text-red">Gross
+                                                    Transaction Amount(Dom.) Required</span>
+                                            </div>
+                                        </label>
+                                        <!-- <div><input type="text" id="invBankName" /></div> -->
+                                        <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross
+                                            Transaction Amount(Intl.)
+                                            <div style="margin-top: 15px;">
+                                                <input type="text" class="form-control" id="invBankName"
+                                                    formControlName="grossTransAmountIntl" />
+                                                <span
+                                                    *ngIf="createTransactionForm.get('grossTransAmountIntl').touched && createTransactionForm.get('grossTransAmountIntl').hasError('required')"
+                                                    class="text-red">Gross
+                                                    Transaction Amount(Intl.) Required</span>
+                                            </div>
+                                        </label>
+                                        <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Gross
+                                            Transaction Amount(Variable.)
+                                            <div style="margin-top: 15px;">
+                                                <input type="text" class="form-control" id="invBankName"
+                                                    formControlName="grossTransAmountVar" />
+                                                <span
+                                                    *ngIf="createTransactionForm.get('grossTransAmountVar').touched && createTransactionForm.get('grossTransAmountVar').hasError('required')"
+                                                    class="text-red">Gross
+                                                    Transaction Amount(Variable.) Required</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service
+                                            Charge Amount(Dom.)
+                                            <div style="margin-top: 15px;">
+                                                <input type="text" class="form-control" id="invBankName"
+                                                    formControlName="serviceChargeAmountDom" />
+                                                <span
+                                                    *ngIf="createTransactionForm.get('serviceChargeAmountDom').touched && createTransactionForm.get('serviceChargeAmountDom').hasError('required')"
+                                                    class="text-red">Service
+                                                    Charge Amount(Dom.) Required</span>
+                                            </div>
+                                        </label>
+                                        <!-- <div><input type="text" id="invBankName" /></div> -->
+                                        <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service
+                                            Charge Amount(Intl.)
+                                            <div style="margin-top: 15px;">
+                                                <input type="text" class="form-control" id="invBankName"
+                                                    formControlName="serviceChargeAmountIntl" />
+                                                <span
+                                                    *ngIf="createTransactionForm.get('serviceChargeAmountIntl').touched && createTransactionForm.get('serviceChargeAmountIntl').hasError('required')"
+                                                    class="text-red">Service
+                                                    Charge Amount(Intl.) Required</span>
+                                            </div>
+                                        </label>
+                                        <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Service
+                                            Charge Amount(Variable.)
+                                            <div style="margin-top: 15px;">
+                                                <input type="text" class="form-control" id="invBankName"
+                                                    formControlName="serviceChargeAmountVar" />
+                                                <span
+                                                    *ngIf="createTransactionForm.get('serviceChargeAmountVar').touched && createTransactionForm.get('serviceChargeAmountVar').hasError('required')"
+                                                    class="text-red">Service
+                                                    Charge Amount(Variable.) Required</span>
+                                            </div>
+                                        </label>
+                                    </div>
 
-                                <div style="margin-left: 1000px;">
-                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Net Payable
-                                        <div style="margin-top: 15px;"><input type="text" class="form-control" id="invBankName" /></div>
-                                    </label>
-                                </div>
-                                <!-- <div class="mb-2">
+
+                                    <!-- <div class="mb-2">
                                     <label for="msgCustomer" class="form-label">Gross Transaction Amount</label>
                                 </div>
                                 <div class="mb-2">
                                     <label for="msgCustomer" class="form-label">Gross Transaction Amount</label>
                                 </div> -->
+                                    <!-- Form group end -->
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                                <!-- Form group start -->
+                                <div class="mb-2">
+                                    <label for="msgCustomer" class="form-label" style="margin-right: 15px;">Net
+                                        Payable
+                                        <div style="margin-top: 15px;">
+                                            <input type="text" class="form-control" id="invBankName"
+                                                formControlName="netPayable" />
+                                            <span
+                                                *ngIf="createTransactionForm.get('netPayable').touched && createTransactionForm.get('netPayable').hasError('required')"
+                                                class="text-red">Net Payable Required</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="msgCustomer" class="form-label">Message/Remarks</label>
+                                    <textarea rows="3" id="msgCustomer" class="form-control"
+                                        formControlName="message"></textarea>
+                                    <span
+                                        *ngIf="createTransactionForm.get('message').touched && createTransactionForm.get('message').hasError('required')"
+                                        class="text-red">Message Required</span>
+                                </div>
                                 <!-- Form group end -->
                             </div>
-                        </div>
-                        <!-- Row end -->
-                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
-                            <!-- Form group start -->
-                            <div class="mb-2">
-                                <label for="msgCustomer" class="form-label">Message/Remarks</label>
-                                <textarea rows="3" id="msgCustomer" class="form-control"></textarea>
-                            </div>
-                            <!-- Form group end -->
-                        </div>
+                            <button class="btn btn-info mt-3" type="submit">
+                                Submit
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
